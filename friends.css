@@ -1,0 +1,229 @@
+:root {
+  --bg: #000000;          /* deep purple background */
+  --panel: #2e0d3f;       /* panel purple */
+  --card: #ffffff;        /* white cards */
+  --text: #f7f7f8;
+  --muted: #c9c9ce;
+  --accent: #15ac4c;      /* green accept/add */
+  --danger: #ef4444;      /* red reject */
+  --line: #2b0a3d;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: 'bg.jpg';
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto,
+               "Gill Sans", Calibri, "Trebuchet MS", sans-serif;
+}
+
+/* ---------------- Navbar ---------------- */
+.topnav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.topnav .logo {
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.topnav ul {
+  list-style: none;
+  display: flex;
+  gap: 18px;
+}
+
+.topnav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+.topnav a:hover,
+.topnav a.active {
+  opacity: 1;
+  color:  #ff1add; 
+}
+
+/* ---------------- Layout ---------------- */
+.wrap {
+  display: grid;
+  grid-template-columns: 320px 1fr 360px;
+  gap: 18px;
+  padding: 22px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  min-height: 70vh;
+}
+
+.panel h2 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+/* ---------------- Search Section ---------------- */
+.searchbar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.searchbar input {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 5px;
+  border: none;
+}
+
+.searchbar button {
+  padding: 10px 10px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff10;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+.uname {
+  font-weight: 800;
+}
+
+/* Buttons */
+.btn {
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-weight: 800;
+}
+
+.btn.add {
+  background-color: #15ac4c;
+  color: black;
+  border: 2px solid var(--accent);
+}
+
+.btn.add:hover {
+  background: #39eb7a;
+  color: #121212;
+}
+
+/* ---------------- Requests Section ---------------- */
+.requests-panel .scroll {
+  overflow: auto;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background: #ffffff10;
+  padding: 10px;
+}
+
+.card {
+  background: var(--card);
+  border: 3px solid #2a073b;
+  border-radius: 10px;
+  padding: 14px;
+  margin-bottom: 14px;
+  color: #111;
+}
+
+.uname.large {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn.accept {
+  background: var(--accent);
+  color: #fff;
+}
+
+.btn.reject {
+  background: var(--danger);
+  color: #fff;
+}
+
+/* ---------------- Friends Section ---------------- */
+.friends-panel .scroll {
+  overflow: auto;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background: #ffffff10;
+  padding: 10px;
+}
+
+.friend-tile {
+  background: #fff;
+  color: #111;
+  border: 3px solid #2a073b;
+  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn.tiny {
+  padding: 6px 10px;
+  border-radius: 8px;
+  background: #eee;
+}
+
+/* ---------------- Helpers ---------------- */
+.muted {
+  color: #dcdcdc;
+  opacity: 0.8;
+  font-style: italic;
+}
+
+/* ---------------- Responsive ---------------- */
+@media (max-width: 1100px) {
+  .wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .panel {
+    min-height: unset;
+  }
+}

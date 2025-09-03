@@ -1,0 +1,158 @@
+:root {
+  --bg: #0b0b0c;
+  --card: #151519;
+  --text: #f7f7f8;
+  --muted: #c9c9ce;
+  --accent: #ff1add;
+  --line: #23232a;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto,
+               "Gill Sans", Calibri, "Trebuchet MS", sans-serif;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  background: rgba(11, 11, 12, 0.9);
+  backdrop-filter: blur(6px);
+}
+
+nav .logo {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+nav a:hover,
+nav a:active{
+     color:  #ff1add;
+
+}
+
+/* Container */
+.container {
+  max-width: 920px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.heading {
+  margin-bottom: 18px;
+}
+
+/* Profile Card */
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.field {
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #1b1b21;
+}
+
+.label {
+  font-size: 0.76rem;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.value {
+  font-size: 1rem;
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 20px;
+  color: var(--muted);
+}
+
+.uid {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas,
+               "Liberation Mono", monospace;
+}
+
+/* Buttons */
+.actions {
+  margin-top: 24px;
+  display: flex;
+  gap: 12px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  border: 1px solid var(--line);
+  background: #1c1c22;
+  color: var(--text);
+}
+
+.btn.primary {
+  background: rgb(241, 90, 48);;
+  border-color: transparent;
+  color: white;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  nav ul {
+    gap: 12px;
+  }
+}

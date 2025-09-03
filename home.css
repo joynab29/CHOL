@@ -1,0 +1,113 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Body background with overlay */
+body {
+  height: 100vh;
+  width: 100%;
+  background: url("bg.jpg") no-repeat center center/cover;
+  position: relative;
+  color: white;
+
+  /* flex to center content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.7); /* dark overlay */
+  z-index: 0;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  position: absolute;  /* stay at top while content is centered */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+nav .logo {
+    z-index: 3;
+  font-size: 28px;
+  font-weight: bold;
+  color: #fffffff7;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ff1add;
+}
+
+/* Welcome Content */
+.content {
+  position: relative;   /* ensures it's above overlay */
+  z-index: 1;
+  text-align: center;
+  
+}
+
+.content .welcome {
+  color: white;
+  font-size: 3.8rem;
+  font-weight: bold;
+  margin-top: -140px;
+}
+
+.content .subtitle {
+  font-size: 1.9rem;
+  color: #ddd; /* softer text under welcome */
+}
+
+#username{
+    color: rgb(241, 90, 48);
+}
+
+.go-to-options{
+    position: relative;
+    z-index: 1;
+}
+.go-to-options a{
+    position: relative;
+    margin-right: 15px;
+    height: 40px;
+}
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background:  rgb(241, 90, 48);;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.btn:hover {
+  background: rgb(255, 112, 72);;
+}
