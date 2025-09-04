@@ -31,7 +31,7 @@ $username = htmlspecialchars($_SESSION['username']);
   <div class='go-to-options'>
       <a href="profile.php" class='btn'>PROFILE</a>
       <a href="friends.php" class='btn'>FRIENDS</a>
-      <a href="#" class='btn'>GROUPS</a>
+      <a href="create_group.php" class='btn'>GROUPS</a>
       <a href="#" class='btn'>EVENTS</a>
   </div>
 </body>
