@@ -10,7 +10,7 @@ $username = htmlspecialchars($_SESSION['username']);
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Chol | Home</title>
   <link rel="stylesheet" href="home.css">   
 </head>
@@ -32,7 +32,7 @@ $username = htmlspecialchars($_SESSION['username']);
       <a href="profile.php" class='btn'>PROFILE</a>
       <a href="friends.php" class='btn'>FRIENDS</a>
       <a href="create_group.php" class='btn'>GROUPS</a>
-      <a href="#" class='btn'>EVENTS</a>
+      <a href="activity.php" class='btn'>EVENTS</a>
   </div>
 </body>
 </html>

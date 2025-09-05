@@ -1,0 +1,126 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Body background with overlay */
+body {
+    height: 100vh;
+    width: 100%;
+    background: url("bg.jpg") no-repeat center center/cover;
+    position: relative;
+    color: white;
+
+    /* flex to center content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7); /* dark overlay */
+    z-index: 0;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    position: absolute;  /* stay at top while content is centered */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+nav .logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #fffffff7;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff1add;
+}
+
+/* Activity Content */
+.content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.content .choose-activity {
+    color: white;
+    font-size: 5rem;  /* Increased font size */
+    font-weight: bold;
+    margin-top: -140px;
+}
+
+/* Activity Buttons */
+.go-to-options {
+    position: relative;
+    z-index: 1;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Equal spacing between the buttons */
+}
+
+.go-to-options a {
+    display: flex;
+    justify-content: center;  /* Center text inside the button */
+    align-items: center;  /* Center text vertically */
+    margin-right: 15px;  /* Increased margin between buttons */
+    height: 80px;  /* Increased button height */
+    width: 250px;  /* Increased width of buttons */
+    font-size: 1.5rem; /* Increased font size */
+    padding: 20px 40px;  /* Increased padding */
+    text-align: center;
+}
+
+.btn {
+    display: inline-flex; /* Use flexbox for centering */
+    justify-content: center;
+    align-items: center;
+    padding: 20px 40px;  /* Increased padding */
+    background: rgb(241, 90, 48);
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5rem; /* Increased font size */
+    width: 250px;  /* Increased button width */
+    height: 80px;  /* Increased button height */
+    text-align: center;
+    flex-direction: column;  /* Stack text vertically inside the button */
+}
+
+.btn:hover {
+    background: rgb(255, 112, 72);
+}
