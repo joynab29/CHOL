@@ -68,7 +68,7 @@ $conn->close();
       <li><a href="home.php">Home</a></li>
       <li><a href="profile.php">Profile</a></li>
       <li><a class="active" href="friends.php">Friends</a></li>
-      <li><a href="groups.php">Groups</a></li>
+      <li><a href="create_group.php">Groups</a></li>
       <li><a href="events.php">Events</a></li>
       <li><a href="logout.php">Logout</a></li>
     </ul>
