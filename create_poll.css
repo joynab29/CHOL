@@ -1,0 +1,141 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Body and Background */
+body {
+    background-color: #2D1460;
+    color: white;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    width: 100%;
+}
+
+nav .logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+/* Poll Form Container */
+.poll-form-container {
+    background-color: rgba(0, 0, 0, 0.7);  /* Dark background with some opacity */
+    padding: 40px;
+    border-radius: 10px;
+    width: 600px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(255, 112, 72, 0.8);  /* Glow effect */
+}
+
+.poll-form-container h1 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* Input Group */
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+.input-group input, .input-group select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    background-color: #3c246f;
+    color: white;
+    font-size: 1rem;
+}
+
+/* Option Group (horizontal display) */
+.option-group {
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+}
+
+.option-group input {
+    width: 150px;
+    margin: 5px;
+}
+
+.delete-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+}
+
+/* Button Styles */
+button {
+    padding: 10px 20px;
+    border-radius: 6px;
+    background-color: rgb(241, 90, 48);
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: rgb(255, 112, 72);
+    box-shadow: 0 0 10px rgba(255, 112, 72, 0.8);
+}
+
+/* Add Option Button */
+button[name="add_option"] {
+    background-color: #6a1b9a;
+    color: white;
+    margin-top: 10px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+button[name="add_option"]:hover {
+    background-color: #9c27b0;
+}
+
+
+
