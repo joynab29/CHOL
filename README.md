@@ -1,2 +1,2 @@
 # CHOL
-CSE370 Project
+A group hangout planner
